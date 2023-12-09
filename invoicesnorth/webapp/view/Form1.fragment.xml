@@ -1,0 +1,21 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+  xmlns:f="sap.ui.layout.form"
+>
+<Panel headerText="{i18n>PanelFrText}" class="sapUiResponsiveMargin" width="40%">
+  <f:SimpleForm id="idSimpleForm" editable="true">
+    <f:content>
+
+      <Label text="{i18n>personLabel}"
+             labelFor="persName"
+      ></Label>
+      <Input
+        id="persName"
+        width="40%"
+      ></Input>
+    </f:content>
+   </f:SimpleForm>
+</Panel>
+
+</c:FragmentDefinition>

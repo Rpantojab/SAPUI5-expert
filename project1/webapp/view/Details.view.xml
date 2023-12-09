@@ -1,0 +1,28 @@
+<mvc:View
+	controllerName="logaligroup.project1.controller.Details"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:local="logaligroup.project1.control"
+	displayBlock="true"
+>
+<Page	title="{i18n>TitleDetails}"
+		titleAlignment="Auto"
+		titleLevel="Auto"
+		showNavButton="true"
+		navButtonPress="onNavBack"
+	>
+    <ObjectHeader title="{invoices>Quantity} x {invoices>ProductName}"
+	             responsive="true" fullScreenOptimized="true">
+		<attributes>
+			<ObjectAttribute text="{invoices>ProductName}"></ObjectAttribute>
+			<ObjectAttribute text="{invoices>ShipperName}"></ObjectAttribute>
+			<ObjectAttribute text="{invoices>ShippedDate}"></ObjectAttribute>
+		</attributes>
+	</ObjectHeader>
+
+	<local:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" change="onRatingChange">
+	</local:ProductRating>
+
+</Page>
+</mvc:View>

@@ -1,0 +1,20 @@
+/* global QUnit */
+QUnit.config.autostart = false;
+
+sap.ui.getCore().attachInit(function () {
+	"use strict";
+
+	sap.ui.require([
+		"logaligroup/project1/test/unit/AllTests"
+	], function () {
+		QUnit.start();
+	});
+});
+
+/*
+sap.ui.require(["logaligroup/project1/test/unit/AllTests"
+], function () {
+	QUnit.config.autostart = false;
+	QUnit.start();
+});
+*/

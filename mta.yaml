@@ -31,9 +31,23 @@ modules:
       - logaligroupproject1.zip
       name: logaligroupproject1
       target-path: resources/
+    - artifacts:
+      - logaligroupinvoicesnorth.zip
+      name: logaligroupinvoicesnorth
+      target-path: resources/
 - name: logaligroupproject1
   type: html5
   path: project1
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: logaligroupinvoicesnorth
+  type: html5
+  path: invoicesnorth
   build-parameters:
     build-result: dist
     builder: custom
