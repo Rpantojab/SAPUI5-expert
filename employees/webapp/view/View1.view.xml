@@ -8,18 +8,15 @@
             <HBox id="idHBox1" >
                 <Label id="idLabelEmployee" labelFor="idInputEmployee" text="{i18n>labelEmployee}" class="sapUiSmallMargin">
                 </Label>
-                <Input id="idInputEmployee"  maxLength="6" width="200px" class="sapUiSmallMarginEnd" liveChange="onChangeEmployee">
+                <Input id="idInputEmployee" value="{/employeeId}" maxLength="6" width="200px" class="sapUiSmallMarginEnd" liveChange="onChangeEmployee">
                 </Input> 
                 <Label id="idLabelCountry" labelFor="idSelCountry" text="{i18n>labelCountry}" class="sapUiSmallMargin" visible="false">
                 </Label>
-                <Select id="idSelCountry" forceSelection="false" visible="false">
+                <Select id="idSelCountry" selectedKey="{/countryKey}" forceSelection="false" items="{/listCountry}" visible="false">
                     <items>
-                        <core:Item key="US" text="{i18n>countryUS}"></core:Item>
-                        <core:Item key="UK" text="{i18n>countryUK}"></core:Item>
-                        <core:Item key="ES" text="{i18n>countryES}"></core:Item>
+                        <core:Item key="key" text="{text}"></core:Item>
                     </items>
                 </Select>
-                 
            </HBox>
         </content>
     </Page>
